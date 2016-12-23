@@ -7,7 +7,7 @@ After each `cap deploy` this bot creates trello card with information about depl
 In `Gemfile`:
 
 ```ruby
-gem 'trello_release_bot', git: 'https://github.com/skore-io/deplobotre.git'
+gem 'thin_release_bot', git: 'https://github.com/skore-io/trellocap.git'
 ```
 
 In `config/initializers/trello_release_bot.rb`
@@ -24,7 +24,7 @@ end
 In `Capfile` just add this line
 
 ```ruby
-require 'capistrano/trello_release_bot'
+require 'capistrano/thin_release'
 ```
 
 NOTE: link to generate token:
