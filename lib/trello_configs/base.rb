@@ -1,4 +1,4 @@
-module TrelloReleaseBot
+module ThinRelease
   class Base
     # Returns (and initialize if needed) a TrelloReleaseBot::Config instance
     #

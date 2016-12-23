@@ -1,4 +1,4 @@
-module TrelloReleaseBot
+module ThinRelease
   module GitLogger
     EOC = "\n\n|EOC|\n\n".freeze
 

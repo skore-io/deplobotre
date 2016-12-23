@@ -1,4 +1,4 @@
-module TrelloReleaseBot
+module ThinRelease
   class TrelloBot
     BASE_URL = 'https://api.trello.com/1'.freeze
 

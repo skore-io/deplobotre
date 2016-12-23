@@ -1,11 +1,11 @@
 require 'rest-client'
-require 'trello_release_bot/base'
-require 'trello_release_bot/config'
-require 'trello_release_bot/git_logger'
-require 'trello_release_bot/trello_bot'
-require 'trello_release_bot/railtie' if defined?(Rails)
+require 'trello_configs/base'
+require 'trello_configs/config'
+require 'trello_configs/git_logger'
+require 'trello_configs/trello_bot'
+require 'trello_configs/railtie' if defined?(Rails)
 
-module TrelloReleaseBot
+module ThinRelease
   CARD_URL_REG = /cid#[^\s]*/
   USER_NAME_REG = /un#[^\s]*/
   MENTION_BOARD_MEMBERS_TEXT = '@board'.freeze
@@ -37,7 +37,7 @@ module TrelloReleaseBot
     texts.push(servers_text) if options[:servers].any?
     texts.push(revission_text)
 
-    card_name = Time.now.strftime("#{options[:application]} | %Y-%m-%d %T%:z")
+    card_name = Time.now.strftime("%Y-%m-%d %T%:z")
     release_card = trello_bot.create_card(list['id'], card_name, texts.join(TEXT_DIVIDER))
     commend_card_text = "This card was deployed to [**#{options[:application]}**](#{release_card['shortUrl']})"
 
