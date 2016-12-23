@@ -13,7 +13,7 @@ gem 'trello_release_bot', git: 'https://github.com/skore-io/deplobotre.git'
 In `config/initializers/trello_release_bot.rb`
 
 ```ruby
-TrelloReleaseBot.configure do |config|
+ThinRelease.configure do |config|
   config.commits_url = 'https://github.com/YOUR_REPO_NAME/commits' # base url for repo commits
   config.trello_token = TRELLO_TOKEN # Trello token with read, write and accout access to the Trello Board
   config.trello_key = TRELLO_API_KEY # https://trello.com/app-key
