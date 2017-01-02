@@ -8,14 +8,14 @@ namespace :trello do
     on roles(:all) do |server|
       servers << server.hostname
     end
-      run_locally do
-        ThinRelease.generate_release(
-          repo_revision: fetch(:repo_revision),
-          revission: `git rev-parse origin/#{fetch(:branch)}`.strip! ,
-          application: fetch(:application),
-          servers: servers
-        )
-      end
+    run_locally do
+      ThinRelease.generate_release(
+        repo_revision: fetch(:repo_revision),
+        revission: `git rev-parse origin/#{fetch(:branch)}`.strip!,
+        application: fetch(:application),
+        servers: servers
+      )
+    end
   end
 
   task :add_default_hooks do

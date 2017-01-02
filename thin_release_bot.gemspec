@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description   = 'Integrate cap after deploy hook with Trello'
   s.license       = 'MIT'
 
-  s.files         = `git ls-files`.split($/)
+  s.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   s.require_paths = ['lib']
 
   s.add_dependency 'capistrano', '>= 3.0'
