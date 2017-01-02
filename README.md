@@ -10,16 +10,17 @@ In `Gemfile`:
 gem 'thin_release_bot', git: 'https://github.com/skore-io/trellocap.git'
 ```
 
-In `config/initializers/trello_release_bot.rb`
+In your `deploy.rb` include the following variable
 
-```ruby
-ThinRelease.configure do |config|
-  config.commits_url = 'https://github.com/YOUR_REPO_NAME/commits' # base url for repo commits
-  config.trello_token = TRELLO_TOKEN # Trello token with read, write and accout access to the Trello Board
-  config.trello_key = TRELLO_API_KEY # https://trello.com/app-key
-  config.board_id = TRELLO_BOARD_ID # You may use board's shortId from url
-end
 ```
+#trello_bot
+
+set :repo_revision, "https://github.com/skore-io/#{fetch(:application)}"
+set :trello_key, "ef767bfeb0c6f8fc0c5820569ec04c41"
+set :trello_token, "41c4bc3ec5f5b6a378e554f5eb4325efe45988688753bf5c434b3bc018fd910b"
+set :board_id, "EHQPQvzm"
+```
+
 
 In `Capfile` just add this line
 
