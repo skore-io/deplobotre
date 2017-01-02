@@ -24,7 +24,7 @@ end
 In `Capfile` just add this line
 
 ```ruby
-require 'capistrano/thin_release'
+require 'capistrano/trello_cap_rake'
 ```
 
 NOTE: link to generate token:
