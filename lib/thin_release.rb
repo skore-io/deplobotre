@@ -33,7 +33,7 @@ module ThinRelease
 
     texts = []
     texts.push(servers_text) if options[:servers].any?
-    textsx.push(revission_text)
+    texts.push(revission_text)
 
     card_name = Time.now.strftime('%Y-%m-%d %T%:z')
     release_card = trello_bot.create_card(list['id'], card_name, texts.join(TEXT_DIVIDER))
