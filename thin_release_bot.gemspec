@@ -12,6 +12,5 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency 'capistrano', '>= 3.0'
-  s.add_dependency 'rake', '>= 10.0'
   s.add_dependency 'rest-client'
 end

@@ -15,9 +15,9 @@ In your `deploy.rb` include the following variable
 ```
 #trello_bot
 
-set :repo_revision, "https://github.com/skore-io/#{fetch(:application)}"
-set :trello_key, "ef767bfeb0c6f8fc0c5820569ec04c41"
-set :trello_token, "41c4bc3ec5f5b6a378e554f5eb4325efe45988688753bf5c434b3bc018fd910b"
+set :repo_revision, "https://github.com/you-repo/#{fetch(:application)}"
+set :trello_key, "xxxxxxxxxxxx"
+set :trello_token, "xxxxxxxxxxx"
 set :board_id, "EHQPQvzm"
 ```
 
