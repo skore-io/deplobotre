@@ -1,6 +1,8 @@
+require 'trello_cap/version'
+
 Gem::Specification.new do |s|
   s.name          = 'thin_release_bot'
-  s.version       = '0.0.1'
+  s.version       = TrelloCap::VERSION
   s.authors       = ['Carlos Leite', 'David Almeida']
   s.email         = ['leite@skore.io', 'david@skore.io']
 
