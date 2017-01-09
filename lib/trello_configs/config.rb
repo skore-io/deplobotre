@@ -1,4 +1,4 @@
-module TrelloReleaseBot
+module ThinRelease
   class Config
     attr_accessor :trello_token, :trello_key, :board_id
 

@@ -1,3 +1,3 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
-gem 'rake'
+gem 'rubocop', '~> 0.46.0', require: false

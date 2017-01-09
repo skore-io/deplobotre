@@ -7,24 +7,25 @@ After each `cap deploy` this bot creates trello card with information about depl
 In `Gemfile`:
 
 ```ruby
-gem 'trello_release_bot', git: 'https://github.com/skore-io/deplobotre.git'
+gem 'thin_release_bot', git: 'https://github.com/skore-io/trellocap.git'
 ```
 
-In `config/initializers/trello_release_bot.rb`
+In your `deploy.rb` include the following variable
 
-```ruby
-TrelloReleaseBot.configure do |config|
-  config.commits_url = 'https://github.com/YOUR_REPO_NAME/commits' # base url for repo commits
-  config.trello_token = TRELLO_TOKEN # Trello token with read, write and accout access to the Trello Board
-  config.trello_key = TRELLO_API_KEY # https://trello.com/app-key
-  config.board_id = TRELLO_BOARD_ID # You may use board's shortId from url
-end
 ```
+#trello_bot
+
+set :repo_revision, "https://github.com/you-repo/#{fetch(:application)}"
+set :trello_key, "xxxxxxxxxxxx"
+set :trello_token, "xxxxxxxxxxx"
+set :board_id, "EHQPQvzm"
+```
+
 
 In `Capfile` just add this line
 
 ```ruby
-require 'capistrano/trello_release_bot'
+require 'capistrano/trello_cap_rake'
 ```
 
 NOTE: link to generate token:
