@@ -3,7 +3,6 @@ require 'trello_configs/base'
 require 'trello_configs/config'
 require 'trello_configs/git_logger'
 require 'trello_configs/trello_bot'
-# require 'trello_configs/railtie' if defined?(Rails)
 
 module ThinRelease
   CARD_URL_REG = /cid#[^\s]*/
